@@ -1,5 +1,5 @@
+import { Link } from '@/i18n.config';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import React from 'react'
 
 const Homepage = ({params: {locale}}: {params: {locale: string}}) => {
@@ -13,7 +13,7 @@ const Homepage = ({params: {locale}}: {params: {locale: string}}) => {
         <ul className='flex gap-10 justify-center py-10 text-xl'>
           {navigationKeys.map((key) => (
             <li key={key}>
-              <Link href={`/${locale}/${key}`}>{t(`navigation.${key}`)}</Link>
+              <Link href={`/${key}`}>{t(`navigation.${key}`)}</Link>
             </li>
           ))}
         </ul>
